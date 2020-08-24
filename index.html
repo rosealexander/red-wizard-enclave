@@ -1,0 +1,238 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Red Wizard Enclave</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta property="og:title" content="Red Wizard Enclave">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https:://www.redwizardenclave.com">
+  <meta property="og:image" content="img/Symbol_of_the_Red_Wizards.png">
+
+  <link href="https://fonts.googleapis.com/css2?family=Grenze+Gotisch&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="apple-touch-icon" href="img/icon/icon.png">
+
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/main.css">
+
+  <meta name="theme-color" content="#fafafa">
+</head>
+
+<body class="mx-5">
+  <div class="container">
+    <div class="mt-5 text-center">
+      <img class="d-block mx-auto mb-4" src="img/Symbol_of_the_Red_Wizards.png" alt="" width="100" height="100">
+      <h1 class="custom-header display-5 text-danger">Red Wizard Enclave</h1>
+      <p class="text-sm-center">Character editor for Baldur's&nbspGate&nbspII:&nbspEnhanced&nbspEdition</p>
+    </div>
+    <hr class="mb-4 mt-4">
+    <div class="mx-md-5">
+      <form class="needs-validation" novalidate="" name="uploadForm" id="form" onsubmit="return false">
+        <div class="mx-lg-5">
+          <div class="container row mx-md-5">
+            <h5 class="mb-3 text-danger">Character Details</h5>
+          </div>
+          <div class="row row mx-md-5">
+            <div class="col-sm-5 mb-3">
+              <input type="text" class="form-control" name="charName" id="character-name" placeholder="" pattern="[A-Za-z]{0,19}" maxlength = "19">
+              <label for="character-name"><small class="text-muted">Character Name</small></label>
+              <div class="invalid-feedback">Invalid symbol</div>
+            </div>
+            <div class="col-6 col-sm-4 mb-3">
+              <select class="custom-select d-block w-100" id="alignment">
+                <option value=""></option>
+                <option>Lawful Good</option>
+                <option>Neutral Good</option>
+                <option>Chaotic Good</option>
+                <option>Lawful Neutral</option>
+                <option>True Neutral</option>
+                <option>Chaotic Neutral</option>
+                <option>Lawful Evil</option>
+                <option>Neutral Evil</option>
+                <option>Chaotic Evil</option>
+              </select>
+              <label for="alignment"><small class="text-muted">Alignment</small></label>
+            </div>
+            <div class="col-6 col-sm-3 mb-3">
+              <input type="number" class="form-control" id="experience" placeholder="" max="8000000" min="1">
+              <label for="experience"><small class="text-muted">Experience</small></label>
+              <div class="invalid-feedback">Cap 8,000,000 XP</div>
+            </div>
+          </div>
+          <div class="row row mx-md-5">
+            <div class="col-6 col-sm-3 mb-3">
+              <select class="custom-select d-block w-100" id="gender">
+                <option value=""></option>
+                <option>Male</option>
+                <option>Female</option>
+              </select>
+              <label for="gender"><small class="text-muted">Gender</small></label>
+            </div>
+            <div class="col-6 col-sm-3 mb-3">
+              <select class="custom-select d-block w-100" id="race">
+                <option value=""></option>
+                <option>Human</option>
+                <option>Elf</option>
+                <option>Half-Elf</option>
+                <option>Dwarf</option>
+                <option>Halfling</option>
+                <option>Gnome</option>
+                <option>Half-Orc</option>
+              </select>
+              <label for="race"><small class="text-muted">Race</small></label>
+            </div>
+            <div class="col-6 col-sm-3 mb-3">
+              <select class="custom-select d-block w-100" id="character-class" onchange="">
+                <option value=""></option>
+                <option>Fighter</option>
+                <option>Ranger</option>
+                <option>Paladin</option>
+                <option>Cleric</option>
+                <option>Druid</option>
+                <option>Mage</option>
+                <option>Thief</option>
+                <option>Bard</option>
+                <option>Sorcerer</option>
+                <option>Shaman</option>
+                <option>Monk</option>
+                <option disabled hidden>Fighter Mage</option>
+                <option disabled hidden>Fighter Cleric</option>
+                <option disabled hidden>Fighter Thief</option>
+                <option disabled hidden>Mage Thief</option>
+                <option disabled hidden>Cleric Mage</option>
+                <option disabled hidden>Cleric Thief</option>
+                <option disabled hidden>Fighter Druid</option>
+                <option disabled hidden>Fighter Mage Cleric</option>
+                <option disabled hidden>Cleric Ranger</option>
+              </select>
+              <label for="character-class"><small class="text-muted">Class</small></label>
+            </div>
+            <div class="col-6 col-sm-3 mb-3">
+              <select class="custom-select d-block w-100" id="class-kit"></select>
+              <label for="class-kit"><small class="text-muted">Class Kit</small></label>
+            </div>
+          </div>
+          <div class="row mx-md-5">
+            <div class="col-4 col-sm-2 mb-3">
+              <input type="number" class="form-control" id="strength" placeholder="" max="25" min="1" maxlength = "2">
+              <label for="strength"><small class="text-muted">STR</small></label>
+              <div class="invalid-feedback">1 to 25</div>
+            </div>
+            <div class="col-4 col-sm-2 mb-3">
+              <input type="number" class="form-control" id="constitution" placeholder="" max="25" min="1" maxlength = "2">
+              <label for="constitution"><small class="text-muted">CON</small></label>
+              <div class="invalid-feedback">1 to 25</div>
+            </div>
+            <div class="col-4 col-sm-2 mb-3">
+              <input type="number" class="form-control" id="dexterity" placeholder="" max="25" min="1" maxlength = "2">
+              <label for="dexterity"><small class="text-muted">DEX</small></label>
+              <div class="invalid-feedback">1 to 25</div>
+            </div>
+            <div class="col-4 col-sm-2 mb-3">
+              <input type="number" class="form-control" id="intelligence" placeholder="" max="25" min="1" maxlength = "2">
+              <label for="intelligence"><small class="text-muted">INT</small></label>
+              <div class="invalid-feedback">1 to 25</div>
+            </div>
+            <div class="col-4 col-sm-2 mb-3">
+              <input type="number" class="form-control" id="wisdom" placeholder="" max="25" min="1" maxlength = "2">
+              <label for="wisdom"><small class="text-muted">WIS</small></label>
+              <div class="invalid-feedback">1 to 25</div>
+            </div>
+            <div class="col-4 col-sm-2 mb-3">
+              <input type="number" class="form-control" id="charisma" placeholder="" max="25" min="1" maxlength = "2">
+              <label for="charisma"><small class="text-muted">CHR</small></label>
+              <div class="invalid-feedback">1 to 25</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- file upload-->
+        <div class="container">
+          <div class="row mx-md-5">
+            <h5 class="mx-lg-5 text-danger">File Upload</h5>
+          </div>
+          <div class="row mx-md-5">
+            <p class="text-sm-left mx-lg-5 text-muted">Upload a .bg2save formatted save-game file.
+              <a data-toggle="collapse" style="text-decoration:none" href="#expand-info">*</a>
+            </p>
+          </div>
+          <div class="row mx-md-5">
+            <p class="mx-lg-5 text-info collapse text-info" id="expand-info">On iOS press and hold the in-game quick-save button to export your save.</p>
+            <div class="mx-lg-5 custom-file mb-3">
+              <input class="form-control-file custom-file-input" id="file" type="file" name="character-file" required=''>
+              <label class="custom-file-label overflow-hidden" id="form-label" for="file">Choose file</label>
+              <div class="invalid-feedback"> no file selected </div>
+              <div class="mb-3 hidden" id="result_block">
+                <div id="result"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <hr class="row mb-4">
+        <!-- submission button -->
+        <div class="container">
+          <div class="row mx-sm-5 mb-4">
+            <button class="mx-lg-5 btn border-0 bg-danger btn-primary btn-lg btn-block" id="submit-button" type="submit" value="Submit">
+            Generate new save file
+            </button>
+          </div>
+        </div>
+      </form>
+    </div>
+
+    <!-- Footer -->
+    <footer class="mx-sm-5 mt-5 pt-0 text-muted text-center text-small">
+      <ul class="list-inline">
+        <li class="list-inline-item"><a href="https://github.com/rosealexander">Github</a></li>
+        <li class="list-inline-item" data-toggle="modal" data-target="#termsModal"><a href="#">Info</a></li>
+      </ul>
+    </footer>
+  </div>
+
+  <!-- Modal -->
+  <div class="modal fade" id="termsModal" tabindex="-1" role="dialog" aria-labelledby="termsModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="termsModalLabel">&#x1F525 &#x1F525 &#x1F525</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span class="text-danger" aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body mr-5 text-muted">
+          <p>© 2020 Alexander Rose</p>
+          <p>This project and its dependent libraries have been license under MIT permissive free software License.
+            <a href="https://opensource.org/licenses/MIT">https://opensource.org/licenses/MIT</a></p>
+          <h5 class="text-muted">Some notes:</h5>
+          <ul style="white-space: pre-line">
+            <li>iOS users, you need to touch and hold the in-game quick-save button to export your saved game.</li>
+            <li>Also iOS users, downloading this file and trying to open it on your device should prompt BG2:EE to automatically import the save-game for you.</li>
+          </ul>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary bg-danger border-0" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- website content -->
+  <script src="js/vendor/FileSaver.min.js"></script>
+  <script src="js/vendor/jszip.min.js"></script>
+  <script src="js/vendor/modernizr-3.11.2.min.js"></script>
+  <script src="js/main.js"></script>
+
+</body>
+
+</html>
+

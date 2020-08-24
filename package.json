@@ -1,0 +1,18 @@
+{
+  "name": "character_editor",
+  "version": "0.0.1",
+  "description": "",
+  "keywords": [],
+  "license": "MIT",
+  "author": "Alexander Rose",
+  "scripts": {
+    "start": "lite-server"
+  },
+  "devDependencies": {
+    "lite-server": "^2.5.4"
+  },
+  "dependencies": {
+    "file-saver": "^2.0.2",
+    "jszip": "^3.5.0"
+  }
+}
