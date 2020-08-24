@@ -17,6 +17,7 @@
     const ALIGNMENT_OFFSET = 635;
     const EXPERIENCE_OFFSET = 24;
     const GENDER_OFFSET = 567;
+    const GENDER_OFFSET2 = 629;
     const CLASS_OFFSET = 627;
     const CLASSKIT_OFFSET = 580;
     const RACE_OFFSET = 626;
@@ -197,12 +198,16 @@
                   file._data.compressedContent[CRE_offset + CLASSKIT_OFFSET + 3] = 0;
               }
 
+              const gender = $("#gender").val();
+              if (gender) {
+                  file._data.compressedContent[CRE_offset + GENDER_OFFSET] = getKey(GENDER_LIST, gender);
+                  file._data.compressedContent[CRE_offset + GENDER_OFFSET2] = getKey(GENDER_LIST, gender);
+              }
+
               const alignment = $("#alignment").val();
               if (alignment) file._data.compressedContent[CRE_offset + ALIGNMENT_OFFSET] = getKey(ALIGNMENT_LIST, alignment);
               const experience = $("#experience").val();
               if (experience) set_Uint32_LE_in_Uint8arr(experience, file._data.compressedContent, CRE_offset + EXPERIENCE_OFFSET);
-              const gender = $("#gender").val();
-              if (gender) file._data.compressedContent[CRE_offset + GENDER_OFFSET] = getKey(GENDER_LIST, gender);
               const kit = $("#class-kit").val();
               if (kit) set_Uint32_LE_in_Uint8arr(getKey(KIT_LIST, kit), file._data.compressedContent, CRE_offset + CLASSKIT_OFFSET);
               const race = $("#race").val();
