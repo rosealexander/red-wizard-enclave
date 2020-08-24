@@ -51,7 +51,6 @@ MakeFile
 .build
 .node_modules
 node_modules
-.DS_Store
 
 # other files #
 #####################
@@ -59,3 +58,5 @@ node_modules
 *.ai
 *.cbp
 *.pkg
+.DS_Store
+DS_Store
