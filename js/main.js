@@ -371,7 +371,8 @@
         17 : "Fighter Mage Cleric",
         18 : "Cleric Ranger",
         19 : "Sorcerer",
-        20 : "Monk"
+        20 : "Monk",
+        21 : "Shaman"
     };
     const RACE_LIST = {
         1 : "Human",
